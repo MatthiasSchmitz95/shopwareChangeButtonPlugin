@@ -1,0 +1,20 @@
+{% sw_extends '@Storefront/storefront/page/product-detail/buy-widget-form.html.twig'%}
+
+
+
+{% block page_product_detail_buy_button %}
+{% set ButtonChangerOptions = {
+    ButtonText: "?"
+} %}
+<div class="d-grid">
+    <button class="btn btn-primary btn-buy"
+    options='{
+        "ButtonText": "{{shopware.theme.ButtonText}}",
+        "ButtonColor": "{{shopware.theme.ButtonColor}}"
+    }'
+            title="{{ "detail.addProduct"|trans|striptags }}"
+            aria-label="{{ "detail.addProduct"|trans|striptags }}">
+        {{ "detail.addProduct"|trans|sw_sanitize }}
+    </button>
+</div>
+{% endblock %}

@@ -1,0 +1,57 @@
+{
+  "name": "ButtonChangerPlugin",
+  "author": "Shopware AG",
+  "views": [
+     "@Storefront",
+     "@Plugins",
+     "@ButtonChangerPlugin"
+  ],
+  "style": [
+    "app/storefront/src/scss/overrides.scss",
+    "@Storefront",
+    "app/storefront/src/scss/base.scss"
+  ],
+  "script": [
+    "@Storefront",
+    "app/storefront/dist/storefront/js/button-changer-plugin.js"
+  ],
+  "asset": [
+    "@Storefront",
+    "app/storefront/src/assets"
+  ],
+  "config":{
+    "blocks":{
+      "jsPlugins":{
+        "label":{
+          "en-GB":"JS Plugins",
+          "de-DE":"JS Plugins"
+        }
+      }
+
+    },
+    "fields":{
+      "ButtonText":{
+        "label":{
+          "en-GB":"Add cart buttonText",
+          "de-DE":"Zum Warenkorb Text"
+        },
+        "type":"text",
+        "value":"zum Warenkorb hinzufügen",
+        "editable": true,
+        "block":"jsPlugins"
+
+      },
+      "ButtonColor":{
+        "label":{
+          "en-GB":"Add cart button color",
+          "de-DE":"Zum Warenkorb Knopffarbe"
+        },
+        "type":"color",
+        "value":"#595959",
+        "editable": true,
+        "block":"jsPlugins"
+      }
+
+    }
+  }
+}
